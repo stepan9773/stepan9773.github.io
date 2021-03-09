@@ -4,7 +4,7 @@
   display: grid;
   height: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 8fr 4fr 6fr 6fr 6fr;
+  grid-template-rows: 1fr 11fr 5fr 8fr 8fr 8fr;
   grid-template-areas:
   "nav"
   "label"
@@ -20,14 +20,19 @@
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
+.ticket_template{
+  background-color: $bg_color;
 
+}
 .text_template {
   p {
     position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
     color: $text_color;
     text-transform: uppercase;
-    top:0;
-    right:0;
+    left: 0;
+    top: -2.5rem;
   }
 }
 
@@ -44,12 +49,13 @@
   justify-content: space-around;
   align-content: end;
   @extend .margin_template;
+
   .item {
     display: flex;
     position: relative;
     align-self: flex-end;
     width: 400px/1980px*100%;
-    height: 40%;
+    height: 30%;
     background-color: $color_1;
     justify-content: center;
 
@@ -62,9 +68,10 @@
       margin: 0;
     }
 
-    &:hover{
+    &:hover {
       opacity: 50%;
-      p{
+
+      p {
         opacity: 100%;
       }
     }
@@ -83,9 +90,16 @@
 }
 
 #art {
+  padding: 1rem;
   position: relative;
   grid-area: art;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "big big  ticket_1 ticket_2"
+                        "big big  ticket_3 ticket_4";
   background-color: $color_1;
+  grid-gap: 1rem;
   @extend .margin_template;
   @extend .text_template;
 }
@@ -93,15 +107,66 @@
 #vocation {
   position: relative;
   grid-area: vocation;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "ticket_1 ticket_2 big big"
+                        "ticket_3 ticket_4 big big";
+
+  grid-gap: 1rem;
   background-color: $color_1;
   @extend .margin_template;
   @extend .text_template;
 }
 
 #sport {
+  padding: 1rem;
   position: relative;
   grid-area: sport;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "big big  ticket_1 ticket_2"
+                        "big big  ticket_3 ticket_4";
   background-color: $color_1;
+  grid-gap: 1rem;
   @extend .margin_template;
   @extend .text_template;
+}
+
+.new_content {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+
+  .new_item {
+    width: 100px/6px*100%;
+    height: 90%;
+    background-color: $bg_color;
+    margin: 1rem;
+    align-self: flex-end;
+  }
+}
+
+.big{
+  grid-area: big;
+  @extend .ticket_template;
+}
+.ticket_1{
+  grid-area: ticket_1;
+  @extend .ticket_template;
+}
+.ticket_2{
+  grid-area: ticket_2;
+  @extend .ticket_template;
+}
+.ticket_3{
+   grid-area: ticket_3;
+  @extend .ticket_template;
+ }
+.ticket_4{
+  grid-area: ticket_4;
+  @extend .ticket_template;
 }
