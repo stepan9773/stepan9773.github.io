@@ -1,10 +1,12 @@
 
+$bg_color:#17212B;
+$color_1:#242F3D;
+$text_color:white;
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #17212B;
+  background: $bg_color;
   a{
     text-decoration: none;
-
   }
 }
 

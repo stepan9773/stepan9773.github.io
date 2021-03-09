@@ -1,0 +1,107 @@
+@import "style.scss";
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 8fr 4fr 6fr 6fr 6fr;
+  grid-template-areas:
+  "nav"
+  "label"
+  "new"
+  "art"
+  "vocation"
+  "sport";
+  grid-gap: 0.3rem;
+
+}
+
+.margin_template {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.text_template {
+  p {
+    position: absolute;
+    color: $text_color;
+    text-transform: uppercase;
+    top:0;
+    right:0;
+  }
+}
+
+#navigate {
+  grid-area: nav;
+}
+
+#label {
+  grid-area: label;
+  display: flex;
+  position: relative;
+  background: linear-gradient(to bottom, $color_1 0%, rgba(233, 233, 233, 0) 90%);
+
+  justify-content: space-around;
+  align-content: end;
+  @extend .margin_template;
+  .item {
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    width: 400px/1980px*100%;
+    height: 40%;
+    background-color: $color_1;
+    justify-content: center;
+
+    p {
+      font-size: 2.3vw;
+      align-self: center;
+      text-align: center;
+      text-transform: uppercase;
+      color: $text_color;
+      margin: 0;
+    }
+
+    &:hover{
+      opacity: 50%;
+      p{
+        opacity: 100%;
+      }
+    }
+
+  }
+
+}
+
+#new {
+  position: relative;
+  grid-area: new;
+  background-color: $color_1;
+  @extend .margin_template;
+  @extend .text_template;
+
+}
+
+#art {
+  position: relative;
+  grid-area: art;
+  background-color: $color_1;
+  @extend .margin_template;
+  @extend .text_template;
+}
+
+#vocation {
+  position: relative;
+  grid-area: vocation;
+  background-color: $color_1;
+  @extend .margin_template;
+  @extend .text_template;
+}
+
+#sport {
+  position: relative;
+  grid-area: sport;
+  background-color: $color_1;
+  @extend .margin_template;
+  @extend .text_template;
+}

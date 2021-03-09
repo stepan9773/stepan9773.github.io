@@ -1,10 +1,10 @@
-
+@import "style";
 .navigate {
   width: 100%;
   position: relative;
   margin: 0;
   display: flex;
-  background-color: #242F3D;
+  background-color: $color_1;
   top: 0;
   justify-content: space-between;
 
