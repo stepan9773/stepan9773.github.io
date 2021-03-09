@@ -1,5 +1,31 @@
 
+.container{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-areas:
+  "non non non"
+  "nonl forma nonr"
+  "nonf nonf nonf";
+}
 
+#forma{
+  grid-area: forma;
+}
+#non{
+  grid-area: non;
+  background-color: #17212B;
+}
+#nonf{
+  grid-area: nonf;
+}
+#nonl{
+  grid-area: nonl;
+}
+#nonr{
+  grid-area: nonr;
+}
 #login_text{
   text-align: center;
   font-size: 5rem;

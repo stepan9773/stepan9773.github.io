@@ -2,57 +2,6 @@ body {
   color: white;
   margin: 0; }
 
-.navigate {
-  width: 100%;
-  position: relative;
-  margin: 0;
-  display: flex;
-  background-color: #242F3D;
-  top: 0;
-  justify-content: space-between; }
-
-.logo {
-  position: relative;
-  left: 0;
-  display: flex;
-  font-size: 2rem;
-  align-content: center;
-  margin-right: 0.5rem;
-  color: #4F5B67;
-  cursor: pointer; }
-  .logo p {
-    font-family: Arial;
-    font-size: 2rem;
-    align-content: center;
-    margin: 1rem;
-    color: white; }
-  .logo svg {
-    width: 3rem;
-    height: 3rem;
-    align-self: center; }
-
-.profile {
-  position: relative;
-  display: flex;
-  right: 0;
-  top: 0;
-  cursor: pointer; }
-  .profile p {
-    font-size: 2rem;
-    align-content: center;
-    color: white;
-    margin: 1rem; }
-  .profile svg {
-    width: 3rem;
-    height: 3rem;
-    align-self: center; }
-    .profile svg path {
-      fill: white; }
-  .profile:hover p {
-    color: #768C9E; }
-  .profile:hover svg path {
-    fill: #768C9E; }
-
 .container {
   position: relative;
   display: flex;
