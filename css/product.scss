@@ -1,0 +1,95 @@
+  @import "style.scss";
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 8fr 5fr 8fr ;
+  grid-template-areas:
+  "nav"
+  "label"
+  "descript"
+  "foot";
+
+  grid-gap: 0.3rem;
+
+}
+
+.navigate{
+  grid-area: nav;
+}
+.product-label{
+  grid-area: label;
+  background-color: $color_1;
+  display: grid;
+  padding: 1rem;
+  background: linear-gradient(to bottom, $color_1 0%, rgba(233, 233, 233, 0) 90%);
+
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr ;
+  grid-template-areas:
+  "img txt"
+  "buy bg";
+  .image-holder{
+    grid-area: img;
+    background-color: $bg_color;
+  }
+  .buy-holder{
+    grid-area: buy;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    .pay-button{
+      background-color: #4F5B67;
+      color: white;
+      font-size: 2rem;
+      margin: 1rem 0 ;
+      border: none;
+      cursor: pointer;
+      ;
+      border-radius: 2rem;
+    }
+  }
+  .text-holder{
+    grid-area: txt;
+    padding: 0 1rem;
+    .title{
+      font-size: 4rem;
+      text-transform: uppercase;
+    }
+    .product-data{
+      font-size: 2rem;
+      color: $price_color;
+    }
+    .prise{
+      font-size: 2rem;
+      color: $text_color;
+    }
+    p{
+      margin:0;
+      color: $text_color;
+    }
+
+  }
+  .bg-holder{
+    grid-area: bg;
+  }
+}
+.description{
+  grid-area: descript;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $color_1;
+  padding: 1rem;
+  align-items: center;
+  color: $text_color;
+  p{
+    color: $text_color;
+    font-size: 2rem;
+  }
+
+}
+.footer{
+  grid-area: foot;
+}

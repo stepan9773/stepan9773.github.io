@@ -132,7 +132,8 @@ body {
     align-content: center; }
     #label .item {
       align-self: center;
-      width: 70%; }
+      width: 70%;
+      p: empty-child; }
       #label .item p {
         font-size: 5vw; }
 

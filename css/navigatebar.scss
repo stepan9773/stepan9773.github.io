@@ -68,7 +68,7 @@
       &:hover {
         svg {
           path {
-            fill: #768C9E;
+            fill: $hover_color;
           }
         }
       }
@@ -102,7 +102,7 @@
     &:hover {
       svg {
         path {
-          fill: #768C9E;
+          fill: $hover_color;
         }
       }
     }
