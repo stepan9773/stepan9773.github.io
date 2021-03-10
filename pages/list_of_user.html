@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap.rtl.css" rel="stylesheet">
-    <link href="css/bootstrap-grid.rtl.css" rel="stylesheet">
-    <link href="css/bootstrap-grid.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.rtl.css" rel="stylesheet">
+    <link href="../css/bootstrap-grid.rtl.css" rel="stylesheet">
+    <link href="../css/bootstrap-grid.css" rel="stylesheet">
 
-    <link href="css/bootstrap-utilities.rtl.css" rel="stylesheet">
-    <link href="css/bootstrap-utilities.css" rel="stylesheet">
+    <link href="../css/bootstrap-utilities.rtl.css" rel="stylesheet">
+    <link href="../css/bootstrap-utilities.css" rel="stylesheet">
 
-    <link href="css/navigatebar.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="../css/navigatebar.css" rel="stylesheet">
+    <link href="../css/list_of_user.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-
 <div class="container">
-
     <div class="navigate" id="navigate">
 
         <div class="logo">
@@ -53,70 +51,21 @@
         </div>
 
     </div>
-    <div id="label" >
-
-        <div class="item" onclick="javascript:window.location.href='#art-link' ">
-            <p>
-                ART
-            </p>
-
+    <div class="list-of-user">
+        <div class="search">
+            <form>
+                <label for="fname">user name:</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lname">email:</label>
+                <input type="text" id="lname" name="lname">
+            </form>
         </div>
-        <div class="item" onclick="javascript:window.location.href='#vocation-link' ">
-            <p>
-                vocation
-            </p>
-        </div>
-        <div class="item" onclick="javascript:window.location.href='#sport-link' ">
-            <p>
-                sport
-            </p>
-        </div>
-    </div>
-    <div id="new">
-        <p>
-            NEW
-        </p>
-        <div class="new_content row">
-            <div class="new_item col"></div>
-            <div class="new_item col"></div>
-            <div class="new_item col"></div>
-            <div class="new_item col"></div>
-            <div class="new_item col"></div>
-        </div>
+        <div class="list">
+            <div class="user">
 
-    </div>
-    <div id="art">
-        <p id="art-link">
-            art
-        </p>
-        <div class="big"></div>
-        <div class="ticket_1"></div>
-        <div class="ticket_2"></div>
-        <div class="ticket_3"></div>
-        <div class="ticket_4"></div>
-    </div>
-    <div id="vocation">
-        <p id="vocation-link">
-            vocation
-        </p>
-        <div class="big"></div>
-        <div class="ticket_1"></div>
-        <div class="ticket_2"></div>
-        <div class="ticket_3"></div>
-        <div class="ticket_4"></div>
-    </div>
-    <div id="sport">
-        <p id="sport-link">
-            sport
-
-        <div class="ticket_1"></div>
-        <div class="ticket_2"></div>
-        <div class="ticket_3"></div>
-        <div class="ticket_4"></div>
-        <div class="big"></div>
-        </p>
+            </div>
+        </div>
     </div>
 </div>
-
 </body>
 </html>
