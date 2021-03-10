@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #17212B; }
+  body a {
+    text-decoration: none; }
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 11fr 5fr 8fr 8fr 8fr;
+  grid-template-areas: "nav" "label" "new" "art" "vocation" "sport";
+  grid-gap: 0.3rem; }
+
+.margin_template, #label, #new, #art, #vocation, #sport {
+  margin-top: 1rem;
+  margin-bottom: 3rem; }
+
+.ticket_template, .big, .ticket_1, .ticket_2, .ticket_3, .ticket_4 {
+  background-color: #17212B; }
+
+.text_template p, #new p, #art p, #vocation p, #sport p {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  left: 0;
+  top: -2.5rem; }
+
+#navigate {
+  grid-area: nav; }
+
+#label {
+  grid-area: label;
+  display: flex;
+  position: relative;
+  background: linear-gradient(to bottom, #242F3D 0%, rgba(233, 233, 233, 0) 90%);
+  justify-content: space-around;
+  align-content: end; }
+  #label .item {
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    width: 20.202020202%;
+    height: 30%;
+    background-color: #242F3D;
+    justify-content: center; }
+    #label .item p {
+      font-size: 2.3vw;
+      align-self: center;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      margin: 0; }
+    #label .item:hover {
+      opacity: 50%; }
+      #label .item:hover p {
+        opacity: 100%; }
+
+#new {
+  position: relative;
+  grid-area: new;
+  background-color: #242F3D; }
+
+#art {
+  padding: 1rem;
+  position: relative;
+  grid-area: art;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "big big  ticket_1 ticket_2" "big big  ticket_3 ticket_4";
+  background-color: #242F3D;
+  grid-gap: 1rem; }
+
+#vocation {
+  position: relative;
+  grid-area: vocation;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "ticket_1 ticket_2 big big" "ticket_3 ticket_4 big big";
+  grid-gap: 1rem;
+  background-color: #242F3D; }
+
+#sport {
+  padding: 1rem;
+  position: relative;
+  grid-area: sport;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "big big  ticket_1 ticket_2" "big big  ticket_3 ticket_4";
+  background-color: #242F3D;
+  grid-gap: 1rem; }
+
+.new_content {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  gap: 1rem;
+  padding: 1rem; }
+  .new_content .new_item {
+    width: 1666.6666666667%;
+    height: 100%;
+    background-color: #17212B; }
+
+.big {
+  grid-area: big; }
+
+.ticket_1 {
+  grid-area: ticket_1; }
+
+.ticket_2 {
+  grid-area: ticket_2; }
+
+.ticket_3 {
+  grid-area: ticket_3; }
+
+.ticket_4 {
+  grid-area: ticket_4; }
+
+@media (max-width: 760px) {
+  .container {
+    grid-template-rows: 1fr 11fr 30fr 8fr 8fr 8fr; }
+
+  #label {
+    flex-direction: column;
+    align-content: center; }
+    #label .item {
+      align-self: center;
+      width: 70%; }
+      #label .item p {
+        font-size: 5vw; }
+
+  .new_content {
+    flex-direction: column; }
+    .new_content .new_item {
+      width: 100%;
+      height: 100rem; }
+
+  .grid_template, #art, #vocation, #sport {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "big big" "big big" "ticket_1 ticket_2" "ticket_3 ticket_4"; } }
+
+/*# sourceMappingURL=index.css.map */
