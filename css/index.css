@@ -123,7 +123,7 @@ body {
 .ticket_4 {
   grid-area: ticket_4; }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   .container {
     grid-template-rows: 1fr 11fr 30fr 8fr 8fr 8fr; }
 

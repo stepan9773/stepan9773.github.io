@@ -12,7 +12,7 @@ body {
   grid-template-areas: "nav" "label" "descript" "foot";
   grid-gap: 0.3rem; }
 
-.navigate {
+#navigate {
   grid-area: nav; }
 
 .product-label {
@@ -73,5 +73,16 @@ body {
 
 .footer {
   grid-area: foot; }
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-rows: 0.5fr 6fr 5fr 8fr; }
+
+  .product-label {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "img txt" "buy bg "; }
+    .product-label .text-holder .title {
+      font-size: 2rem; } }
 
 /*# sourceMappingURL=product.css.map */

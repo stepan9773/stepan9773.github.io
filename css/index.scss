@@ -179,7 +179,7 @@
   @extend .ticket_template;
 }
 
-@media (screen and max-width: 760px) {
+@media (screen and max-width: 800px) {
   .container {
     grid-template-rows: 1fr 11fr 5fr*6 8fr 8fr 8fr;
   }

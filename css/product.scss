@@ -15,7 +15,7 @@
 
 }
 
-.navigate{
+#navigate{
   grid-area: nav;
 }
 .product-label{
@@ -92,4 +92,21 @@
 }
 .footer{
   grid-area: foot;
+}
+  @media (screen and max-width: 1000px) {
+.container{
+  grid-template-rows: 0.5fr 6fr 5fr 8fr ;
+}
+    .product-label{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr ;
+      grid-template-areas:
+  "img txt"
+  "buy bg ";
+      .text-holder{
+        .title{
+          font-size: 2rem;
+        }
+      }
+    }
 }
