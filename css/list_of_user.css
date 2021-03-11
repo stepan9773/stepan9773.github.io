@@ -91,4 +91,10 @@ body {
         font-size: 1rem;
         text-transform: uppercase; }
 
+@media (max-width: 1000px) {
+  .container .search form {
+    flex-direction: column; }
+  .container .list .user div {
+    font-size: 1rem; } }
+
 /*# sourceMappingURL=list_of_user.css.map */

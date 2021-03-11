@@ -72,15 +72,16 @@
       &:hover {
         border-style: solid;
         border-color: $hover_color;
-        border-width :  0.1rem;
+        border-width: 0.1rem;
 
 
         svg {
 
           height: 100%;
           display: block;
+
           path {
-            fill:$text_color;
+            fill: $text_color;
 
           }
         }
@@ -118,6 +119,24 @@
         font-size: 1rem;
         text-transform: uppercase;
 
+      }
+    }
+  }
+}
+
+@media (screen and max-width: 1000px) {
+  .container {
+    .search {
+      form {
+        flex-direction: column;
+      }
+    }
+
+    .list {
+      .user {
+        div {
+          font-size: 1rem;
+        }
       }
     }
   }
