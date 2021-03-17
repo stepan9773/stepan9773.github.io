@@ -1,0 +1,96 @@
+@import "style";
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .validate-content{
+
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    .alert{
+      width: 24%;
+      display: flex;
+      background-color: $color_1;
+      color: $text_color;
+      margin: 1rem;
+      align-content: center;
+      text-align: center;
+      justify-content: center;
+      p{
+        text-transform: uppercase ;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+        align-self: center;
+        justify-self: center;
+      }
+      svg{
+        margin: auto 0.5rem ;
+        align-self: center;
+        justify-self: center;
+        width: 2.5rem;
+        height: 2.5rem;
+
+        path{
+          fill: green;
+        }
+      }
+      #bad{
+        path{
+          fill: #a92020;
+        }
+      }
+      #success{
+        path{
+          fill: green;
+        }
+      }
+      #warning{
+        path{
+          fill: #ab5e00;
+        }
+      }
+      #info{
+        path{
+          fill: #0090a4;
+        }
+      }
+    }
+
+  }
+}
+
+@media (screen and max-width: 990px) {
+  .container {
+    .validate-content {
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+      .alert{
+        align-self: center;
+        justify-self: center;
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (screen and max-width: 500px) {
+  .container {
+    .validate-content {
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+      .alert{
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+      }
+    }
+  }
+}
