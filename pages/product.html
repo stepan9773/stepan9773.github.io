@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link href="../css/navigatebar.css" rel="stylesheet">
     <link href="../css/product.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css">
 </head>
 <body>
 <div class="container">
@@ -16,7 +17,7 @@
                       fill="white"/>
             </svg>
             <p>
-                BOO-KING
+
             </p>
         </div>
         <div class="user-links">
@@ -46,32 +47,62 @@
 
         </div>
         <div class="text-holder">
-            <p class="title">
-                THE best bootstrap comedy site
+            <p class="title" id="title">THE best bootstrap comedy site</p>
+            <p class="product-data">12/12/2021 at <span id="seat"> </span>
             </p>
-            <p class="product-data">
-                12/12/2020 at 12 seat lost
-            </p>
-            <p class="prise">
-                200 EUR
+            <p class="prise" >
+               <span id="price">200</span> EUR
             </p>
         </div>
         <div class="buy-holder">
-            <button class="pay-button">buy</button>
-            <button class="pay-button">book</button>
+            <button class="pay-button" onClick="buy()">buy</button>
+            <button class="pay-button" onclick="book()">book</button>
         </div>
         <div class="bg-holder"></div>
     </div>
-    <div class="description">
-        <h1>
+    <div class="description row">
+        <h1 class="col-xs-12 col-sm-12">
             description
         </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <p class="col-xs-5 col-sm-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
+        <div class="col-xs-7 col-sm-7 ">
+            <div class="row">
+
+                <div class="col-12">
+                    <h3>Entertament</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-12">
+                    <h3>Special</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-12">
+                    <h3>Info</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <div class="row justify-center">
+                <div class="col-12 align-self-center">
+                    <h3>Place Left</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+
+            </div>
+        </div>
     </div>
     <div class="footer">
 
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/pages/product.js"></script>
+
 </body>
 </html>

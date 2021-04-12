@@ -4,7 +4,7 @@
   display: grid;
   height: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 8fr 5fr 8fr ;
+  grid-template-rows: 0.5fr 8fr 5fr 8fr ;
   grid-template-areas:
   "nav"
   "label"
@@ -25,14 +25,16 @@
   padding: 1rem;
   background: linear-gradient(to bottom, $color_1 0%, rgba(233, 233, 233, 0) 90%);
 
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr ;
   grid-template-areas:
   "img txt"
   "buy bg";
+  min-height: 50vh;
   .image-holder{
     grid-area: img;
     background-color: $bg_color;
+    min-height: 100px;
   }
   .buy-holder{
     grid-area: buy;
@@ -78,11 +80,10 @@
 .description{
   grid-area: descript;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+
   background-color: $color_1;
   padding: 1rem;
-  align-items: center;
+
   color: $text_color;
   p{
     color: $text_color;
@@ -98,7 +99,7 @@
   grid-template-rows: 0.5fr 6fr 5fr 8fr ;
 }
     .product-label{
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0 1fr;
       grid-template-rows: 1fr 1fr ;
       grid-template-areas:
   "img txt"
@@ -107,6 +108,9 @@
         .title{
           font-size: 2rem;
         }
+      }
+      .image-holder{
+        min-height: auto;
       }
     }
 }

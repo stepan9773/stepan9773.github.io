@@ -110,6 +110,26 @@
 
 }
 
+#singup-button {
+
+  background-color: #4F5B67;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2rem;
+  &:hover{
+    opacity: 0.8;
+    background-color: #1a1e21;
+    color: white;
+  }
+}
+#submiter{
+  display: none;
+}
+
 @media screen and (max-height: 600px) and (max-width: 600px) {
   #login_text {
     font-size: 3rem;

@@ -8,7 +8,7 @@ body {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 8fr 5fr 8fr;
+  grid-template-rows: 0.5fr 8fr 5fr 8fr;
   grid-template-areas: "nav" "label" "descript" "foot";
   grid-gap: 0.3rem; }
 
@@ -21,12 +21,14 @@ body {
   display: grid;
   padding: 1rem;
   background: linear-gradient(to bottom, #242F3D 0%, rgba(233, 233, 233, 0) 90%);
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "img txt" "buy bg"; }
+  grid-template-areas: "img txt" "buy bg";
+  min-height: 50vh; }
   .product-label .image-holder {
     grid-area: img;
-    background-color: #17212B; }
+    background-color: #17212B;
+    min-height: 100px; }
   .product-label .buy-holder {
     grid-area: buy;
     display: flex;
@@ -61,11 +63,8 @@ body {
 .description {
   grid-area: descript;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
   background-color: #242F3D;
   padding: 1rem;
-  align-items: center;
   color: white; }
   .description p {
     color: white;
@@ -79,10 +78,12 @@ body {
     grid-template-rows: 0.5fr 6fr 5fr 8fr; }
 
   .product-label {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "img txt" "buy bg "; }
     .product-label .text-holder .title {
-      font-size: 2rem; } }
+      font-size: 2rem; }
+    .product-label .image-holder {
+      min-height: auto; } }
 
 /*# sourceMappingURL=product.css.map */
