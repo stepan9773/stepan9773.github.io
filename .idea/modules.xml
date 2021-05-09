@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/web_UI.iml" filepath="$PROJECT_DIR$/.idea/web_UI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/booking_react.iml" filepath="$PROJECT_DIR$/.idea/booking_react.iml" />
     </modules>
   </component>
 </project>

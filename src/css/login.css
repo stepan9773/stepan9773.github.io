@@ -1,0 +1,114 @@
+.login-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "non non non" "nonl forma nonr" "nonf nonf nonf"; }
+
+#forma {
+  grid-area: forma; }
+
+#non {
+  grid-area: non;
+  background-color: #17212B; }
+
+#nonf {
+  grid-area: nonf; }
+
+#nonl {
+  grid-area: nonl; }
+
+#nonr {
+  grid-area: nonr; }
+
+#login_text {
+  text-align: center;
+  font-size: 5rem;
+  color: #4F5B67;
+  position: relative; }
+
+#logo {
+  text-align: center;
+  font-size: 6rem;
+  color: #4F5B67;
+  width: 100%; }
+  #logo svg {
+    width: 50%; }
+    #logo svg path {
+      fill: #4F5B67;
+      width: 100%; }
+
+.forma {
+  display: grid;
+  position: relative;
+  vertical-align: center;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+.login {
+  position: relative;
+  width: 50vh;
+  height: 50%;
+  justify-self: center;
+  justify-items: center;
+  border-radius: 1rem;
+  align-content: center;
+  text-align: center;
+  align-self: center;
+  background-color: #242F3D; }
+  .login input {
+    position: relative;
+    width: 90%;
+    border-radius: 1rem;
+    background: #4F5B67;
+    color: white;
+    padding: 12px 20px;
+    margin: 1rem 0;
+    display: inline-block;
+    border: 1px solid #4F5B67;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    height: auto; }
+  .login ::placeholder {
+    color: #17212B; }
+  .login button {
+    background-color: #4F5B67;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 2rem; }
+  .login button:hover {
+    opacity: 0.8;
+    background-color: #1a1e21;
+    color: white; }
+
+#singup-button {
+  background-color: #4F5B67;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2rem; }
+  #singup-button:hover {
+    opacity: 0.8;
+    background-color: #1a1e21;
+    color: white; }
+
+#submiter {
+  display: none; }
+
+@media screen and (max-height: 600px) and (max-width: 600px) {
+  #login_text {
+    font-size: 3rem; }
+
+  .cancelbtn {
+    width: 100%; } }
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,221 @@
+@import "style.scss";
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows:  11fr 5fr 8fr 8fr 8fr;
+  grid-template-areas:
+
+  "label"
+  "new"
+  "art"
+  "vocation"
+  "sport";
+  grid-gap: 0.3rem;
+
+}
+
+.margin_template {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.ticket_template {
+  background-color: $bg_color;
+
+}
+
+.text_template {
+  p {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $text_color;
+    text-transform: uppercase;
+    left: 0;
+    top: -2.5rem;
+  }
+}
+
+#navigate {
+  grid-area: nav;
+}
+
+#label {
+  grid-area: label;
+  display: flex;
+  position: relative;
+  background: linear-gradient(to bottom, $color_1 0%, rgba(233, 233, 233, 0) 90%);
+
+  justify-content: space-around;
+  align-content: end;
+  @extend .margin_template;
+
+  .item {
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    width: 400px/1980px*100%;
+    height: 30%;
+    background-color: $color_1;
+    justify-content: center;
+
+    p {
+      font-size: 2.3vw;
+      align-self: center;
+      text-align: center;
+      text-transform: uppercase;
+      color: $text_color;
+      margin: 0;
+    }
+
+    &:hover {
+      opacity: 50%;
+
+      p {
+        opacity: 100%;
+      }
+    }
+
+  }
+
+}
+
+#new {
+  position: relative;
+  grid-area: new;
+  background-color: $color_1;
+  @extend .margin_template;
+  @extend .text_template;
+
+}
+
+#art {
+  padding: 1rem;
+  position: relative;
+  grid-area: art;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "big big  ticket_1 ticket_2"
+                        "big big  ticket_3 ticket_4";
+  background-color: $color_1;
+  grid-gap: 1rem;
+  @extend .margin_template;
+  @extend .text_template;
+}
+
+#vocation {
+  position: relative;
+  grid-area: vocation;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "ticket_1 ticket_2 big big"
+                        "ticket_3 ticket_4 big big";
+
+  grid-gap: 1rem;
+  background-color: $color_1;
+  @extend .margin_template;
+  @extend .text_template;
+}
+
+#sport {
+  padding: 1rem;
+  position: relative;
+  grid-area: sport;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "big big  ticket_1 ticket_2"
+                        "big big  ticket_3 ticket_4";
+  background-color: $color_1;
+  grid-gap: 1rem;
+  @extend .margin_template;
+  @extend .text_template;
+}
+
+.new_content {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  gap: 1rem;
+  padding: 1rem;
+
+  .new_item {
+    width: 100px/6px*100%;
+    height: 100%;
+    background-color: $bg_color;
+
+
+  }
+}
+
+.big {
+  grid-area: big;
+  @extend .ticket_template;
+}
+
+.ticket_1 {
+  grid-area: ticket_1;
+  @extend .ticket_template;
+}
+
+.ticket_2 {
+  grid-area: ticket_2;
+  @extend .ticket_template;
+}
+
+.ticket_3 {
+  grid-area: ticket_3;
+  @extend .ticket_template;
+}
+
+.ticket_4 {
+  grid-area: ticket_4;
+  @extend .ticket_template;
+}
+
+@media (screen and max-width: 800px) {
+  .container {
+    grid-template-rows: 1fr 11fr 5fr*6 8fr 8fr 8fr;
+  }
+  #label {
+    flex-direction: column;
+    align-content: center;
+
+    .item {
+      align-self: center;
+      width: 70%;
+
+      p {
+        font-size: 5vw;
+      }
+      p:empty-child
+    }
+  }
+  .new_content {
+    flex-direction: column;
+
+    .new_item {
+      width: 100%;
+      height: 100rem;
+    }
+
+  }
+  .grid_template{
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "big big"
+                         "big big"
+                         "ticket_1 ticket_2"
+                         "ticket_3 ticket_4";
+
+  }
+  #art,#vocation,#sport {
+    @extend .grid_template;
+  }
+}

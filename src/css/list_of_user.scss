@@ -1,0 +1,148 @@
+@import "style";
+
+.list-container {
+
+  position: relative;
+}
+
+.list-of-user {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  background-color: $color_1;
+  width: 100%;
+  border-radius: 2rem;
+  flex-direction: column;
+  position: relative;
+
+  .search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: $color_1;
+
+    form {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      text-align: center;
+
+      label {
+        align-self: center;
+        color: $text_color;
+        font-size: 2rem;
+        margin: 0.5rem;
+
+
+      }
+
+      input {
+        border-radius: 1rem;
+        background: #4F5B67;
+        color: white;
+        padding: 12px 20px;
+        margin: 1rem 0;
+        display: inline-block;
+        border: 1px solid #4F5B67;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .list {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    border-radius: 2rem;
+    background-color: $bg_color;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+
+    .user {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      justify-content: space-around;
+      div{
+        display: flex;
+        justify-self: center;
+        justify-content: space-between;
+      }
+      &:hover {
+        border-style: solid;
+        border-color: $hover_color;
+        border-width: 0.1rem;
+
+
+        svg {
+
+          height: 100%;
+          display: block;
+
+          path {
+            fill: $text_color;
+
+          }
+        }
+      }
+
+      div {
+        color: white;
+        padding: 0.6rem;
+        font-size: 1.5rem;
+
+      }
+
+      svg {
+        display: none;
+        justify-self: center;
+        align-self: center;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+      }
+
+    }
+
+    .head {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      background-color: $color_1;
+      border-radius: 1rem;
+
+      div {
+        color: white;
+        padding: 0.6rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+
+      }
+    }
+  }
+}
+
+@media (screen and max-width: 1000px) {
+  .container {
+    .search {
+      form {
+        flex-direction: column;
+      }
+    }
+
+    .list {
+      .user {
+        div {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
