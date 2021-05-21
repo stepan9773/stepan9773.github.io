@@ -2,8 +2,7 @@
 import $ from 'jquery';
 function smoke() {
     // eslint-disable-next-line no-console
-    console.log(localStorage.getItem('token'));
-    console.log(1);
+
     // eslint-disable-next-line
     $.ajax({
         type: 'GET',
